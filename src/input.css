@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+.dark-mode {
+  @apply dark:text-white;
+}
+
+.navbar-fixed {
+  @apply fixed z-[999] bg-white bg-opacity-80 dark:bg-slate-600 dark:bg-opacity-70;
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+.options-line {
+  @apply w-[30px] h-[2px] my-2 block bg-dark dark:bg-white;
+}
+
+.options-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.options-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.options-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
